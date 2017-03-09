@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+    <title>Forms</title>
+    
+    <style type="text/css">
+
+        /*can change the image in ther weather form*/
+        .Weather figure img
+        {
+            margin-left: -307px;
+        }
+        .Weather .dotsIndicator
+        {
+            background-position: 0px 0px;
+        }
+
+        .Calendar section table tbody tr:nth-child(5)
+        {
+            font-size: 17px;
+            height: 46px;;
+        }
+		
+		/*a new row for the calendar*/
+        .Calendar section table tbody tr:nth-child(6)
+        {
+            font-size: 0;
+            height: 0;
+        }
+
+        .progress:before
+		{
+            width: 388px;
+        }
+
+		.indicator
+		{
+			width: 300px;
+		}
+
+    </style>
+
+</head>
+<body>
+    <div class="mainContent">
+        <div class="leftContainer">
+            <form id="Conventer" tabindex="0" role="application" aria-labelledby="conventerInfo">
+                <h2 class="wcag-hidden" id="conventerInfo">Conventer application</h2>
+                <h2>
+                    <div class="mainCurency">
+                        <span class="typeOfCurrency">usd</span>
+                        <label for="inputValue">Amount of money entry</label>
+                        <input type="text" value="356.3" class="totalCurrency" id="inputValue">
+                        <p>$</p>
+                    </div>
+                </h2>
+                <ul role="presentation">
+                    <li role="presentation">
+                        <div class="curency" aria-labelledby="OutputInfo OutputValue">
+                            <span class="typeOfCurrency">gbr</span>
+                          
+                            <output type="text" class="totalCurrency" value="156.3" tabindex="0">
+                                <span id="OutputInfo" class="wcag-hidden">Conversion results:</span>
+                                <span id="OutputValue">
+                                    <p>&#163</p>156.3
+                                </span>
+                            </output>
+                        </div>
+                    </li>
+                </ul>
+                <nav class="ConventerManager" role="toolbar">
+                    <label for="conversionAction">Conversion action</label>
+                    <input type="button" name="convertButton" id="conversionAction" class="buttonFocus"></input>
+                    
+                    <label for="addNewCurrency">Add new type of currency</label>
+                    <input type="button" name="addCurency" id="addNewCurrency" class="buttonFocus"></input>
+                    
+                    <label for="currencyType">Open the currency list</label>
+                    <input type="button" name="listOfCurencies" id="currencyType" class="buttonFocus"></input>
+                </nav>
+            </form>
+            
+
+            <div id="Calendar" tabindex="0" aria-labelledby="calendarInfo">
+                <h2 id="calendarInfo" class="wcag-hidden">Calendar. Use it to difine the date and to plan</h2>
+                <header class="clearfix" role="presentation">
+                   
+                    <label for="previousMonth">To previous Month</label>
+                    <input type="button" class="leftArrow buttonFocus" id="previousMonth"></input>
+                   
+                    <span tabindex="0" aria-describedby="month currentYear">
+                        <p class="year" id="currentYear"><span class="wcag-hidden">year:</span>2012</p>
+                        <p id="month"><span class="wcag-hidden">month:</span>july</p>
+                    </span>
+                    
+                    <label for="nextMounth">To next Month</label>
+                    <input type="button" class="rightArrow buttonFocus" id="nextMounth"></input>
+                
+                </header>
+                <form>
+                    <table cellpadding="0" cellspacing="0" border="0" role="presentation">
+                        <thead>
+                            <tr>
+                                <th><a href="#" title="Sunday" role="columnheader">S</a></th>
+                                <th><a href="#" role="columnheader" title="Monday">M</a></th>
+                                <th><a href="#" role="columnheader" title="Tuesday">T</a></th>
+                                <th><a href="#" role="columnheader" title="Wednesday">W</a></th>
+                                <th><a href="#" role="columnheader" title="Thursday">T</a></th>
+                                <th><a href="#" role="columnheader" title="Friday">F</a></th>
+                                <th><a href="#" role="columnheader" title="Saturday">S</a></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="firstLine">
+                                <td><a href="#" aria-labelledby="month" title="date: 1">1</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 2">2</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 3">3</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 4">4</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 5">5</a></td>
+                                <td><a href="#" class="followDate" aria-labelledby="month" title="date: 6">6</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 7">7</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" aria-labelledby="month" title="date: 8">8</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 9">9</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 10">10</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 11"> 11</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 12">12</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 13">13</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 14">14</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" aria-labelledby="month" title="date: 15">15<a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 16">16</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 17">17</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 18">18</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 19">19</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 20">20</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 21">21</a></td>     
+                            </tr>
+                            <tr>
+                                <td><a href="#" aria-labelledby="month" title="date: 22">22<a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 23">23</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 24">24</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 25">25</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 26">26</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 27">27</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 28">28</a></td>   
+                            </tr>
+                            <tr>
+                                <td><a href="#" aria-labelledby="month" title="date: 29">29</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 30">30</a></td>
+                                <td><a href="#" aria-labelledby="month" title="date: 31">31</a></td> 
+                                <td><a href="#" tabindex="-1" aria-labelledby="month" title=""></a></td>
+                                <td><a href="#" tabindex="-1" aria-labelledby="month" title=""></a></td>
+                                <td><a href="#" tabindex="-1" aria-labelledby="month" title=""></a></td>   
+                            </tr>
+                            <tr>
+                                <td><a href="#" tabindex="-1" aria-labelledby="month" title=""></a></td>
+                                <td><a href="#" tabindex="-1" aria-labelledby="month" title=""></a></td>
+                                <td><a href="#" tabindex="-1" aria-labelledby="month" title=""></a></td>
+                                <td><a href="#" tabindex="-1" aria-labelledby="month" title=""></a></td>
+                                <td><a href="#" tabindex="-1" aria-labelledby="month" title=""></a></td>
+                                <td><a href="#" tabindex="-1" aria-labelledby="month" title=""></a></td>
+                                <td><a href="#" tabindex="-1" aria-labelledby="month" title=""></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+
+            <div class="Weather" role="application" aria-labelledby="weatherInfo" tabindex="0">
+                <h2 class="wcag-hidden" id="weatherInfo">
+                    Weather application. You can change the next city by pressing "Change the next place" button
+                </h2>
+        
+                <figure tabindex="0" aria-labelledby="timeValue changedCity temperatureValue">               
+                    <img src="img/WeatherBackGround.png" alt="photo of place you chosen" tabindex="0"/>
+                    <span class="dotsIndicator"></span>
+
+                    <time id="timeValue"><span class="wcag-hidden">Time is:</span>8:34 am</time>                    
+                    <p class="place" id="changedCity"><span class="wcag-hidden">Place:</span>Zagora, Greece</p>
+                    <p class ="temperature" id="temperatureValue"><span class="wcag-hidden">temperature:</span>73<span class="degreeSign">&deg</span></p>
+                </figure> 
+                <nav class="weatherManager">
+                    <label for="fahrenheitDegreeTab">fahrenheit degree tabulation</label>
+                    <input type="button" name="fahrenheitDegree" id="fahrenheitDegreeTab" role="tab" class="buttonFocus"/>
+
+                    <label for="celsiusDegreeTab">celsius degree tabulation</label>
+                    <input type="button" name="CelsiusDegree" id="celsiusDegreeTab" role="tab" class="buttonFocus"/>
+
+                    <label for="AddNewPlaceButton">Add new place</label>
+                    <input type="button" name="AddNewPlace" id="AddNewPlaceButton" class="buttonFocus"/>
+
+                    <label for="listOfPlacesButton">Change the next place</label>
+                    <input type="button" name="ListOfPlaces" id="listOfPlacesButton" class="buttonFocus"/>
+                </nav>
+            </div>
+        </div>
+        <form class="middleContainer">
+           
+            <div class="Music" tabindex="0" role="application" aria-describedby="MusicInfo">
+                <h2 class="wcag-hidden" id="MusicInfo">Music application. Use it for music listening</h2>   
+                <div class="clearfix" >
+                    <figure>
+                        <img src="img/bandFoto.png" alt="famous Band photo"/>
+                    </figure>
+                <h2 class="bandName overflowFix">Faded Paper Figures</h2>
+                <h3 class="songName overflowFix">Invent it all again</h3>
+                <div class="progressLine">
+                	<div class="progress"></div>
+                	<span class="indicator" tabindex="0" aria-labelledby="progressIndicator timeTrackInfo" aria-live="polite"></span>
+                    <span id="progressIndicator" class="wcag-hidden">press "left-arrow" for previous track;
+                    press "right-arrow" for next track</label>
+                </div>
+                <p class="time" id="timeTrackInfo"><span class="wcag-hidden">The track will finish in</span>-1:57 </p>
+                    <nav class="clearfix">                       
+                        
+                        <input type="button" class="musicFollow" name="musicFollowButton" id="musicFollowButton"/>
+                        <label for="musicFollowButton">You can change a group and song</label>
+                        
+                        <input type="checkbox" class="musicPlay" name="musicPlayButtonName" id="musicPlayButton" tabindex="0">
+                        <label for="musicPlayButton" role="checkbox" tabindex="0">play/pause button</label>
+
+                        <input type="button" class="musicPrevious" name="musicPreviousButton" id="musicPreviousButtonInfo">
+                        <label for="musicPreviousButtonInfo">"left-arrow":choise the previous track</label>
+
+                        <input type="button" class="musicNext" name="musicNextButton" id="musicNextButtonInfo">
+                        <label for="musicNextButtonInfo">"right-arrow":choise the next track</label>
+
+                        <input type="button" class="musicUnorderedList" name="musicUnorderedListButton" id="musicUnorderedListButtonInfo">
+                        <label for="musicUnorderedListButtonInfo">music Unordered List type</label>
+
+                        <input type="button" class="musicOrderedList" name="musicOrderedListButton" id="musicOrderedListButtonInfo">
+                        <label for="musicOrderedListButtonInfo">music Ordered List type</label>
+
+                        <input type="button" class="musicFavourite" name="musicFavouriteButton" id="musicFavouriteButtonInfo">
+                        <label for="musicFavouriteButtonInfo">Favourite music Info</label>
+
+
+                        <input type="button" class="musicAdd" name="musicAddButton" id="musicAddButtonInfo">
+                        <label for="musicAddButtonInfo">Add new track</label>
+
+                        <input type="button" class="musicDrop" name="musicDropButton" id="musicDropButtonInfo">
+                        <label for="musicDropButtonInfo">Drop this track</label>
+                    </nav>
+                </div>
+			</div>
+        </form>
+
+        <div class="rightContainer">
+            <div class="Mail" tabindex="0" role="dialog" id="mailApplication" aria-labelledby="mailApplicationInfo">     
+                <h2 class="wcag-hidden" id="mailApplicationInfo">Mail application. Use it for communication</h2>                       
+                <header class="clearfix">
+                    <input type="button" class="addPerson buttonFocus" name="addPersonButton" id="addPersonInfo" role="link">
+                    <label for="addPersonInfo">Begin to communicate with a new person</label>
+
+                    <input type="button" class="listOfPersons buttonFocus" name="listOfPersonsButton" id="listOfPersonsInfo" role="link">
+                    <label for="listOfPersonsInfo">Open list to choise persons</label>
+
+                </header>
+                <section role="presentation">
+                    <ul class="clearfix">
+                        <li class="firstPerson firstTypeStatus">
+                            <figure tabindex="0" aria-labelledby="YaroslavLozhkinStatus YaroslavLozhkinPrint YaroslavLozhkinRecieve">
+                                <div class="personalFoto">
+                                    <a href=""><img src="img/Foto/YaroslavLozhkin.png" alt="Yaroslav Lozhkin photo"/></a>
+                                </div>
+                                <span id="YaroslavLozhkinStatus" class="wcag-hidden">Status: agreed</span>
+                                <span id="YaroslavLozhkinPrint" class="wcag-hidden">Print: yes</span>
+                                <span id="YaroslavLozhkinRecieve" class="wcag-hidden">Recieved: unknown</span>
+                            </figure>
+                            <h2  class="YaroslavLozhkin">Yaroslav Lozhkin</h2>
+                            <p class="overflowFix"><span></span>Alright got it!</p>
+                        </li>
+                        <li class="secondTypeStatus" >
+                            <figure tabindex="0">
+                                <div class="personalFoto">
+                                    <a href=""><img src="img/Foto/MichaelZenaty.png" alt="Michael Zenaty photo"/></a>
+                                </div>
+                                <span id="MichaelZenatyStatus" class="wcag-hidden">Status: disagreed</span>
+                                <span id="MichaelZenatyPrint" class="wcag-hidden">Print: no</span>
+                                <span id="MichaelZenatyRecieve" class="wcag-hidden">Recieved: yes</span>
+                            </figure>
+                            <h2  class="MichaelZenaty">MichaelZenaty</h2>
+                            <span id="MichaelZenaty" class="wcag-hidden">Status: disagreed</span>
+                            <p class="overflowFix"><span class="success"></span>Sent</p>
+                        </li>
+                        <li>
+                            <figure tabindex="0" aria-labelledby="WellsRiley WellsRileyStatus WellsRileyPrint WellsRileyRecieve">
+                                <div class="personalFoto">
+                                    <a href=""><img src="img/Foto/WellRiley.png" alt="Well Riley photo"/></a>
+                                </div>
+                                <span id="WellsRileyStatus" class="wcag-hidden">Status: unknown;</span>
+                                <span id="WellsRileyPrint" class="wcag-hidden">Print: no;</span>
+                                <span id="WellsRileyRecieve" class="wcag-hidden">Recieved: unknown;</span>
+                            </figure >
+                            <h2 class="WellsRiley">Wells Riley</h2>
+                            <span id="WellsRiley" class="wcag-hidden"></span>
+                            <p class="overflowFix"><span></span>Typing...</p>
+                        </li>
+                        <li>
+                            <figure tabindex="0" aria-labelledby="MattVickers MattVickerStatus MattVickersPrint MattVickersRecieve">
+                                <div class="personalFoto">
+                                    <a href=""><img src="img/Foto/MattVickers.png" alt="Matt Vickers photo"/></a>
+                                </div>
+                                <span id="MattVickerStatus" class="wcag-hidden">Status: unknown;</span>
+                                <span id="MattVickersPrint" class="wcag-hidden">Print: yes;</span>
+                                <span id="MattVickersRecieve" class="wcag-hidden">Recieved: no;</span>
+                            </figure>
+                            <h2 id="MattVickers" class="overflowFix">Matt Vickers</h2>
+                            <p class="overflowFix"><span class="failure"></span>Not delivered</p>
+                        </li>
+                        <li class="thirdTypeStatus">
+                            <figure tabindex="0" aria-labelledby="DivyaManian DivyaManianStatus DivyaManianPrint DivyaManianRecieve">
+                                <div class="personalFoto">
+                                    <a href=""><img src="img/Foto/DivyaManian.png" alt="Divya Manian photo"/></a>
+                                </div>
+                                <span id="DivyaManianStatus" class="wcag-hidden">Status: thinking;</span>
+                                <span id="DivyaManianPrint" class="wcag-hidden">Print: yes;</span>
+                                <span id="DivyaManianRecieve" class="wcag-hidden">Recieved: unknown;</span>
+                            </figure>
+                            <h2 id="DivyaManian" class="overflowFix">Divya Manian</h2>
+                            <p class="overflowFix"><span></span>You can download it on github</p>
+                        </li>
+                        <li>
+                             <figure tabindex="0" aria-labelledby="VinThomas VinThomasStatus VinThomasPrint VinThomasRecieve">
+                                <div class="personalFoto">
+                                    <a href="#"><img src="img/Foto/VinThomas.png" alt="Vin Thomas photo"/></a>
+                                </div>
+                                <span id="VinThomasStatus" class="wcag-hidden">Status: unknown;</span>
+                                <span id="VinThomasPrint" class="wcag-hidden">Print: yes;</span>
+                                <span id="VinThomasRecieve" class="wcag-hidden">Recieved: no;</span>
+                            </figure>
+                            <h2 id="VinThomas" class="overflowFix">Vin Thomas</h2>
+                            <p class="overflowFix">Thank you!</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            
+            <form class="Login clearfix" role="dialog" tabindex="0" aria-labelledby="LoginApplication">
+                <h2 id="LoginApplication" class="wcag-hidden" tabindex="0">Login Form</h2>
+                <p id="emailError" class="error">Error</p>
+                <label for="emailAddress">Enter Email Address</label>
+                <input type="text" placeholder="Email Address..." id="emailAddress" aria-describbedly="emailHelp emailError">
+                <span class="help" id="emailHelp">Enter your email address</span>
+
+                <div class="measure"></div>
+                
+                <p id="passwordError" class="error">Error</p>
+                <label for="password">Choose Password:<span class="wcag-hidden">
+                    Passwords must be 10 characters long</span>
+                </label>
+                <input type="password" placeholder="Password..." id="password" aria-describbedly="passwordHelp passwordError">
+                <span id="passwordHelp" class="wcag-hidden">Passwords must be 10 characters long</span>
+               
+                <span class="personIcon"></span>
+                <span class="lockIcon"></span>
+            
+                <input type="button" id="signUp">
+                <label for="signUp">"SignUp button" Press it to sign up.</label>
+
+                <input type="button" id="signIn">
+                <label for="signIn">"SignIn button" Press it to sign In.<span class="wcag-hidden"></label>
+
+            </form>
+
+            <form class="buttons" tabindex="0" role="application" aria-labelledby="ButtonsInfo">
+                <h2 class="wcag-hidden" id="ButtonsInfo">Buttons application</h2>
+                <div class="clearfix">
+                    <label for="InputTextBlockInfo">Enter text for validation</label>
+                    <input type="text" class="Valid InputBlock" placeholder="Valid Input"
+                    id="InputTextBlockInfo"/>
+                    <input type="checkbox" role="checkbox" class="checkbox" id="validInput" aria-checked="false" role="checkbox"/>
+                    <label for="validInput" role="checkbox" tabindex="0">Checkbox for validation text</label>
+                </div>
+               
+                <div class="clearfix">                    
+                    <div class="backgroundIndicator">
+                        <input type="range" min="0" max="100" step="1" value="70" id="rangeInfo" a> 
+                        <label for="rangeInfo">Range information</label>
+                    </div>
+                    <input type="checkbox" class="checkbox" id="redCheckbox" />
+                    <label for="redCheckbox" role="checkbox" tabindex="0" aria-checked="true">to Choise something</label>
+
+                </div>
+                    <div class="clearfix"> 
+                    
+                    <input type="text" class="InputBlock Invalid" placeholder="Invalid Input" id="InvalidTextBlockInfo"/>
+                    <label for="InvalidTextBlockInfo">Invalid Text Info</label>
+                    <input type="checkbox" class="checkbox" id="greenCheckbox" role="checkbox" aria-checked="true" tabindex="0"/>
+                    <label for="greenCheckbox" role="checkbox" tabindex="0" aria-checked="false">to Choise something else</label>
+                </div> 
+            </form>
+        </div>
+    </div>    
+</body>
+</html>
